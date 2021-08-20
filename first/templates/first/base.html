@@ -1,3 +1,4 @@
+{% load static %}
 <!doctype html>
 <html lang="ko">
 <head>
@@ -5,17 +6,11 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Title</title>
+    <title>로또 번호</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'first/style.css' %}">
 </head>
 <body>
-    <p>
-        Hellow World!
-    </p>
-    <p>
-        {{ current_date }}
-    </p>
-    <p>
-        {{ current_date|date:"Y년 m월 d일 H시 i분 s초" }}
-    </p>
+    {% block content %}
+    {% endblock %}
 </body>
 </html>
